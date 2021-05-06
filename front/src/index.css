@@ -1,0 +1,126 @@
+/* ./src/index.css */
+/* ./styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.inputReactif {
+    @apply w-full;
+    @apply pr-2;
+    @apply py-1;
+    @apply shadow-inner;
+    @apply rounded-md ;
+}
+
+.inputReactif:focus {
+    @apply outline-none;
+    @apply ring-blue-500;
+    @apply ring-2;
+    @apply ring-inset;
+}
+
+.tabItem {
+    @apply flex-1;
+    @apply transition;
+    @apply duration-500;
+    @apply px-4;
+    @apply flex;
+    @apply items-center;
+    @apply justify-center;
+    @apply font-semibold;
+    @apply cursor-pointer;
+    @apply h-12;
+    @apply uppercase;
+    @apply font-semibold;
+    @apply border-r-2;
+    @apply border-gray-200;
+}
+
+.tabItemSelected {
+    border-bottom: 2px solid #4F46E5;
+    @apply text-indigo-600;
+}
+
+.tabItem:active {
+    @apply bg-indigo-300;
+    @apply transition;
+    @apply duration-200;
+}
+
+
+*::-webkit-scrollbar {
+    width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+    background: rgb(230, 230, 230); /* color of the tracking area */
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: rgb(133, 133, 133); /* color of the scroll thumb */
+    border-radius: 20px; /* roundness of the scroll thumb */
+}
+
+.input {
+    @apply h-12;
+    @apply px-4;
+    @apply w-full;
+    @apply outline-none;
+    @apply transition-all;
+    @apply duration-200;
+    @apply border-gray-400;
+    @apply border-b-2;
+}
+
+.input:focus ~ label, .input:valid ~ label {
+    @apply font-semibold;
+	top: -10px;
+	font-size: 13px;
+    @apply text-indigo-600;
+}
+
+.input:focus ~ .line {
+    @apply bg-indigo-600;
+    @apply w-full;
+}
+
+.input.inputError ~ .line {
+    @apply bg-red-600;
+    @apply w-full;
+}
+
+.label {
+    @apply transition-all ;
+    @apply duration-200 ;
+    @apply block ;
+    @apply text-gray-500 ;
+    @apply pointer-events-none ;
+    @apply absolute ;
+    @apply top-3;
+}
+
+.line {
+    
+    @apply transition-all ;
+    @apply duration-200 ;
+    @apply h-1 ;
+    @apply w-0 ;
+    @apply relative ;
+    @apply mx-auto ;
+    @apply -mt-1;
+}
+
+.pl-32px {
+    padding-left: 32px;
+}
+
+.error {
+    @apply text-red-500;
+    @apply font-semibold;
+    @apply text-xs;
+}
+
+.tabError{
+    @apply border-2;
+    @apply border-red-500;
+}
